@@ -1,43 +1,42 @@
-import React, { useState } from 'react'
-import './index.css'
+import React from "react";
+import "./index.css";
 
 const translations = {
   zh: {
+    title: "AIMM 汇桥集团",
     slogan: "连接信任，跨越国界",
-    welcome: "欢迎访问 AIMM 官网",
-    email: "邮箱：aimm.linkasia@gmail.com"
+    about: "AIMM 汇桥集团是一家以“连接信任、跨越国界”为理念的商业整合平台，专注于整合中马优质企业资源，推动国际合作、品牌共建、商业落地与战略发展。",
+    services: ["设计与装修", "房地产销售"],
+    contact: "邮箱：aimm.linkasia@gmail.com",
   },
-  en: {
-    slogan: "Connecting Trust, Bridging Nations",
-    welcome: "Welcome to AIMM Official Website",
-    email: "Email: aimm.linkasia@gmail.com"
-  },
-  ms: {
-    slogan: "Menghubungkan Kepercayaan, Merentasi Sempadan",
-    welcome: "Selamat Datang ke Laman Rasmi AIMM",
-    email: "E-mel: aimm.linkasia@gmail.com"
-  }
-}
+};
 
 export default function App() {
-  const [lang, setLang] = useState("zh")
-  const t = translations[lang]
+  const t = translations.zh;
 
   return (
     <div className="container">
-      <header>
-        <div className="logo">AIMM 汇桥集团</div>
-        <div className="lang-buttons">
-          <button onClick={() => setLang("zh")}>中</button>
-          <button onClick={() => setLang("en")}>EN</button>
-          <button onClick={() => setLang("ms")}>BM</button>
-        </div>
-      </header>
-      <main>
-        <h1>{t.slogan}</h1>
-        <p>{t.welcome}</p>
-        <p>{t.email}</p>
-      </main>
+      <h1>{t.title}</h1>
+      <h2>{t.slogan}</h2>
+
+      <section>
+        <h3>关于我们</h3>
+        <p>{t.about}</p>
+      </section>
+
+      <section>
+        <h3>服务项目</h3>
+        <ul>
+          {t.services.map((s, i) => (
+            <li key={i}>{s}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h3>联系方式</h3>
+        <p>{t.contact}</p>
+      </section>
     </div>
-  )
+  );
 }
