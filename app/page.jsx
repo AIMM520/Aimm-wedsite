@@ -1,0 +1,1 @@
+// Home page with language switching and dynamic content

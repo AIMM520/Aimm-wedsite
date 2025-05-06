@@ -1,10 +1,3 @@
-# AIMM 官方网站
+# AIMM 官网系统
 
-此项目为 AIMM 汇桥集团官网，具备以下功能：
-
-- 多语言支持（简体中文 / English / Bahasa Melayu）
-- 高级感蓝白风格 UI
-- 关于我们 / 服务项目 / 联系方式
-- 集成 Google Analytics、Chatbase 聊天机器人
-- SEO 支持（sitemap.xml + meta）
-- 响应式布局，适合 PC 与手机访问
+完整前端 + CMS 内容管理系统，支持三语切换、AI 聊天、SEO 优化与动态内容发布。

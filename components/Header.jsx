@@ -1,0 +1,1 @@
+// Navigation bar with language switch buttons
