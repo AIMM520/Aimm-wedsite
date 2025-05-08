@@ -1,12 +1,1 @@
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f9fafc;
-  color: #333;
-}
-header {
-  background: linear-gradient(to right, #002855, #004e92);
-  color: white;
-  padding: 2.5rem 1rem;
-  text-align: center;
-}
+body { font-family: sans-serif; background: #f9fafc; color: #333; margin: 0; } .container { padding: 2rem; max-width: 960px; margin: auto; } h1 { color: #004080; }

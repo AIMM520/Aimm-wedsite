@@ -1,28 +1,28 @@
-// Home page with language switching and dynamic content
-import React from "react";
+import React, { useState } from "react";
+import translations from "../lib/i18n.js";
 
-export default function Page() {
+export default function HomePage() {
+  const [lang, setLang] = useState("zh");
+  const t = translations[lang];
   return (
-    <div>
+    <div className="container">
       <header>
-        <h1>AIMM 汇桥集团</h1>
-        <p>连接信任，跨越国界</p>
+        <h1>{t.brand}</h1>
+        <p>{t.slogan}</p>
+        <div style={{ marginTop: "1rem" }}>
+          <button onClick={() => setLang("zh")}>中文</button>
+          <button onClick={() => setLang("en")}>EN</button>
+          <button onClick={() => setLang("ms")}>BM</button>
+        </div>
       </header>
-      <main style={{ padding: "2rem" }}>
+      <main>
         <section>
-          <h2>关于我们</h2>
-          <p>AIMM 汇桥集团是一个连接中马跨境合作的平台，专注于企业资源整合、品牌共建与市场落地。</p>
+          <h2>{t.aboutTitle}</h2>
+          <p>{t.aboutDesc}</p>
         </section>
         <section>
-          <h2>服务项目</h2>
-          <ul>
-            <li>设计与装修</li>
-            <li>房地产销售</li>
-          </ul>
-        </section>
-        <section>
-          <h2>联系方式</h2>
-          <p>邮箱: aimm.linkasia@gmail.com</p>
+          <h2>{t.contact}</h2>
+          <p>Email: aimm.linkasia@gmail.com</p>
         </section>
       </main>
     </div>
